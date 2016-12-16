@@ -17,5 +17,4 @@ RUN apt-get update && \
     curl -L https://getcomposer.org/composer.phar > /usr/bin/composer && chmod +x /usr/bin/composer && \
     apt-get autoremove -y && \
     docker-php-source delete && \
-    ln -s /root/.phpbrew/php/7.0/bin/php /usr/bin/php && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /usr/share/man
