@@ -6,7 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y git curl bzip2 \
+    apt-get install -y git curl bzip2 mysql-client \
                        libxslt1.1 libmcrypt4 libcurl3 libenchant1c2a libgmp10 libc-client2007e libkrb5-3 \
                        libfbclient2 firebird2.5-common libldap-2.4-2 gcc make libxml2-dev libssl-dev libbz2-dev \
                        libmcrypt-dev libreadline6-dev libxslt1-dev libcurl4-openssl-dev libenchant-dev libpng12-dev \
