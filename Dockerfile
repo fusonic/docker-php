@@ -21,10 +21,9 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     pecl install memcached-3.0.3 && \
     docker-php-ext-enable memcached && \
     curl -L https://getcomposer.org/composer.phar > /usr/bin/composer && chmod +x /usr/bin/composer && \
-    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     git lfs install && \
     apt-get install nodejs yarn && \
-    curl https://www.npmjs.com/install.sh | sh && \
     apt-get purge lib*-dev && \
     apt-get autoremove -y && \
     docker-php-source delete && \
