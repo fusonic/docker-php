@@ -17,7 +17,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
                        libsqlite3-dev && \
     ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
     ln -s /usr/lib/libc-client.a /usr/lib/x86_64-linux-gnu/libc-client.a && \
-    docker-php-ext-install -j$(nproc) mysqli gd zip pdo_sqlite && \
+    docker-php-ext-install -j$(nproc) mysqli gd zip pdo_sqlite intl && \
     pecl install memcached-3.0.3 && \
     docker-php-ext-enable memcached && \
     curl -L https://getcomposer.org/composer.phar > /usr/bin/composer && chmod +x /usr/bin/composer && \
