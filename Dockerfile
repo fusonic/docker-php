@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.3
 
 MAINTAINER Fusonic "office@fusonic.net"
 
@@ -15,11 +15,11 @@ RUN apt-get update && \
                        libfbclient2 firebird3.0-common libldap-2.4-2 gcc make libxml2-dev libssl-dev libbz2-dev \
                        libmcrypt-dev libreadline6-dev libxslt1-dev libcurl4-openssl-dev libenchant-dev libpng-dev \
                        libgmp3-dev libc-client2007e-dev libkrb5-dev firebird-dev libldap2-dev libmemcached-dev \
-                       libsqlite3-dev libicu-dev && \
+                       libsqlite3-dev libicu-dev libzip-dev && \
     ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
     ln -s /usr/lib/libc-client.a /usr/lib/x86_64-linux-gnu/libc-client.a && \
     docker-php-ext-install -j$(nproc) mysqli gd zip pdo_sqlite intl soap && \
-    pecl install memcached-3.0.3 && \
+    pecl install memcached && \
     docker-php-ext-enable memcached && \
     curl -L https://getcomposer.org/composer.phar > /usr/bin/composer && chmod +x /usr/bin/composer && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
