@@ -15,7 +15,7 @@ RUN apt-get update && \
                        libfbclient2 firebird3.0-common libldap-2.4-2 gcc make libxml2-dev libssl-dev libbz2-dev \
                        libmcrypt-dev libreadline6-dev libxslt1-dev libcurl4-openssl-dev libenchant-dev libpng-dev \
                        libgmp3-dev libc-client2007e-dev libkrb5-dev firebird-dev libldap2-dev libmemcached-dev \
-                       libsqlite3-dev libicu-dev libzip-dev && \
+                       libsqlite3-dev libicu-dev libzip-dev libpng16-16 libmemcached11 libmemcachedutil2 libzip4 && \
     ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
     ln -s /usr/lib/libc-client.a /usr/lib/x86_64-linux-gnu/libc-client.a && \
     docker-php-ext-install -j$(nproc) mysqli gd zip pdo_sqlite intl soap && \
